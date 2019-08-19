@@ -1,5 +1,3 @@
-module ChatSpace
-  class Application < Rails::Application
 require_relative 'boot'
 require 'rails/all'
 # Require the gems listed in Gemfile, including any gems
@@ -13,8 +11,6 @@ module ChatSpace
       g.helper false
       g.test_framework false
       config.i18n.default_locale = :ja
-  end
-end
     end
   end
 end
