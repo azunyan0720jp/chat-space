@@ -33,7 +33,6 @@ $(document).on('turbolinks:load', function(){
       contentType: false
     })
     .done(function(formData) {
-      console.log(formData)
       var html = buildHTML(formData);
       $('.messages').append(html);
       $('#new_message')[0].reset();
