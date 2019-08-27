@@ -15,6 +15,7 @@ class MessagesController < ApplicationController
         format.json 
       end
     else
+      render action: :index
     end
   end
 
