@@ -2,7 +2,7 @@ $(function () {
   
   function buildHTML(message) {
 
-    image = (message.image) ? `<img class= "lower-message__image" src=${message.image} >` : "";
+    image = (message.image) ? `<img class= "lower-message__image" src=${message.image} >` : ""
     
     var html = `<div class="message" data-message-id="${message.id}">
           <div class="upper-message">
@@ -39,11 +39,13 @@ $(function () {
       var html = buildHTML(data);
       $('.messages').append(html);
       $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 'fast');
-      $('.form__submit').prop('disabled', false);
       $('form')[0].reset();
     })
     .fail(function () {
       alert('Please Type a Message!');
+    })
+    .always(function(){
+      $('.form__submit').prop('disabled', false);
     })
   })  
   var reloadMessages = function () {
